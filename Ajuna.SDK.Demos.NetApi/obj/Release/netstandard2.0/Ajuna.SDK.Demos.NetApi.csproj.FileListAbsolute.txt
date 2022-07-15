@@ -1,0 +1,10 @@
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/bin/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.deps.json
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/bin/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.dll
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/bin/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.pdb
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/obj/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.csproj.AssemblyReference.cache
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/obj/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/obj/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.AssemblyInfoInputs.cache
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/obj/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.AssemblyInfo.cs
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/obj/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.csproj.CoreCompileInputs.cache
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/obj/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.dll
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/obj/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.pdb

@@ -1,0 +1,15 @@
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/bin/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.deps.json
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/bin/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.dll
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/bin/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.pdb
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/bin/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.dll
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/bin/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.dll
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/bin/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.pdb
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/bin/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.pdb
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.csproj.AssemblyReference.cache
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.AssemblyInfoInputs.cache
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.AssemblyInfo.cs
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.csproj.CoreCompileInputs.cache
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.csproj.CopyComplete
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.dll
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient.Mockup/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.Mockup.pdb

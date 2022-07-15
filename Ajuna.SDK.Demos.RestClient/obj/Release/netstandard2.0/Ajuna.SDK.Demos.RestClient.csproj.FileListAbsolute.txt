@@ -1,0 +1,13 @@
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/bin/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.deps.json
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/bin/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.dll
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/bin/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.pdb
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/bin/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.dll
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/bin/Release/netstandard2.0/Ajuna.SDK.Demos.NetApi.pdb
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.csproj.AssemblyReference.cache
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.AssemblyInfoInputs.cache
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.AssemblyInfo.cs
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.csproj.CoreCompileInputs.cache
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.csproj.CopyComplete
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.dll
+/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/obj/Release/netstandard2.0/Ajuna.SDK.Demos.RestClient.pdb

@@ -1,0 +1,210 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestService/Ajuna.SDK.Demos.RestService.csproj": {}
+  },
+  "projects": {
+    "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj",
+        "projectName": "Ajuna.SDK.Demos.NetApi",
+        "projectPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj",
+        "packagesPath": "/Users/dimitriospaxinos/.nuget/packages/",
+        "outputPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dimitriospaxinos/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "/Users/dimitriospaxinos/Documents/Development/Ajuna/_Local Nuget Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Ajuna.NetApi": {
+              "target": "Package",
+              "version": "[0.1.14, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestService/Ajuna.SDK.Demos.RestService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestService/Ajuna.SDK.Demos.RestService.csproj",
+        "projectName": "Ajuna.SDK.Demos.RestService",
+        "projectPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestService/Ajuna.SDK.Demos.RestService.csproj",
+        "packagesPath": "/Users/dimitriospaxinos/.nuget/packages/",
+        "outputPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestService/obj/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/Users/dimitriospaxinos/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0",
+          "net6.0"
+        ],
+        "sources": {
+          "/Users/dimitriospaxinos/Documents/Development/Ajuna/_Local Nuget Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj": {
+                "projectPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj"
+              }
+            }
+          },
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj": {
+                "projectPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Ajuna.AspNetCore": {
+              "target": "Package",
+              "version": "[0.1.15, )"
+            },
+            "Ajuna.ServiceLayer": {
+              "target": "Package",
+              "version": "[0.1.15, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[5.0.15, 5.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        },
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Ajuna.AspNetCore": {
+              "target": "Package",
+              "version": "[0.1.15, )"
+            },
+            "Ajuna.ServiceLayer": {
+              "target": "Package",
+              "version": "[0.1.15, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

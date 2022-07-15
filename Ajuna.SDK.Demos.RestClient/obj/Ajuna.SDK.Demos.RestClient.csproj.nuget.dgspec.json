@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/Ajuna.SDK.Demos.RestClient.csproj": {}
+  },
+  "projects": {
+    "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj",
+        "projectName": "Ajuna.SDK.Demos.NetApi",
+        "projectPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj",
+        "packagesPath": "/Users/dimitriospaxinos/.nuget/packages/",
+        "outputPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dimitriospaxinos/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "/Users/dimitriospaxinos/Documents/Development/Ajuna/_Local Nuget Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Ajuna.NetApi": {
+              "target": "Package",
+              "version": "[0.1.14, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/Ajuna.SDK.Demos.RestClient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/Ajuna.SDK.Demos.RestClient.csproj",
+        "projectName": "Ajuna.SDK.Demos.RestClient",
+        "projectPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/Ajuna.SDK.Demos.RestClient.csproj",
+        "packagesPath": "/Users/dimitriospaxinos/.nuget/packages/",
+        "outputPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.RestClient/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dimitriospaxinos/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "/Users/dimitriospaxinos/Documents/Development/Ajuna/_Local Nuget Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj": {
+                "projectPath": "/Users/dimitriospaxinos/Documents/Development/Ajuna/Ajuna.SDK.ScaffoldedProjects/Ajuna.SDK.Demos.NetApi/Ajuna.SDK.Demos.NetApi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Ajuna.ServiceLayer.Model": {
+              "target": "Package",
+              "version": "[0.1.15, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
