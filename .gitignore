@@ -367,6 +367,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 bin
+bin/release
 obj
 packages
 obj/*
