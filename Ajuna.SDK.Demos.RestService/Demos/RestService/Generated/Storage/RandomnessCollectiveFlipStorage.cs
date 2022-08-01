@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Ajuna.NetApi.Model.Types.Base;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
 using Ajuna.ServiceLayer.Attributes;
 using Ajuna.ServiceLayer.Storage;
 using System.Collections.Generic;
@@ -31,7 +30,7 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         ///  is arranged as a ring buffer with `block_number % 81` being the index into the `Vec` of
         ///  the oldest hash.
         /// </summary>
-        Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2 GetRandomMaterial();
+        Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 GetRandomMaterial();
     }
     
     /// <summary>
@@ -43,20 +42,20 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         /// <summary>
         /// _randomMaterialTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2> _randomMaterialTypedStorage;
+        private TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21> _randomMaterialTypedStorage;
         
         /// <summary>
         /// RandomnessCollectiveFlipStorage constructor.
         /// </summary>
         public RandomnessCollectiveFlipStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.RandomMaterialTypedStorage = new TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2>("RandomnessCollectiveFlip.RandomMaterial", storageDataProvider, storageChangeDelegates);
+            this.RandomMaterialTypedStorage = new TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21>("RandomnessCollectiveFlip.RandomMaterial", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _randomMaterialTypedStorage property
         /// </summary>
-        public TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2> RandomMaterialTypedStorage
+        public TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21> RandomMaterialTypedStorage
         {
             get
             {
@@ -91,7 +90,7 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         ///  is arranged as a ring buffer with `block_number % 81` being the index into the `Vec` of
         ///  the oldest hash.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2 GetRandomMaterial()
+        public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 GetRandomMaterial()
         {
             return RandomMaterialTypedStorage.Get();
         }

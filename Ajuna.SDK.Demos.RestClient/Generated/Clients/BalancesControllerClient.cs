@@ -13,8 +13,9 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec;
    using Ajuna.SDK.Demos.RestClient.Generated.Interfaces;
    
    public sealed class BalancesControllerClient : BaseClient, IBalancesControllerClient
@@ -34,29 +35,29 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Balances.TotalIssuance");
       }
-      public async Task<AccountData> GetAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<AccountData> GetAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<AccountData>(_httpClient, "balances/account", BalancesStorage.AccountParams(key));
+         return await SendRequestAsync<AccountData>(_httpClient, "balances/account", Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage.AccountParams(key));
       }
-      public async Task<bool> SubscribeAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<bool> SubscribeAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("Balances.Account", BalancesStorage.AccountParams(key));
+         return await _subscriptionClient.SubscribeAsync("Balances.Account", Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage.AccountParams(key));
       }
-      public async Task<WeakBoundedVecT3> GetLocks(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<WeakBoundedVecT2> GetLocks(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<WeakBoundedVecT3>(_httpClient, "balances/locks", BalancesStorage.LocksParams(key));
+         return await SendRequestAsync<WeakBoundedVecT2>(_httpClient, "balances/locks", Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<bool> SubscribeLocks(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<bool> SubscribeLocks(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("Balances.Locks", BalancesStorage.LocksParams(key));
+         return await _subscriptionClient.SubscribeAsync("Balances.Locks", Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<BoundedVecT3> GetReserves(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<BoundedVecT10> GetReserves(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT3>(_httpClient, "balances/reserves", BalancesStorage.ReservesParams(key));
+         return await SendRequestAsync<BoundedVecT10>(_httpClient, "balances/reserves", Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
-      public async Task<bool> SubscribeReserves(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<bool> SubscribeReserves(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("Balances.Reserves", BalancesStorage.ReservesParams(key));
+         return await _subscriptionClient.SubscribeAsync("Balances.Reserves", Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
       public async Task<EnumReleases> GetStorageVersion()
       {

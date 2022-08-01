@@ -15,12 +15,12 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
    using System.Net.Http;
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients;
    using Ajuna.SDK.Demos.RestClient.Generated.Clients;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.frame_support.weights;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types;
    using Ajuna.NetApi.Model.Types.Base;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest;
    
    public class SystemControllerClientTest : ClientTestBase
    {
@@ -30,33 +30,33 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.AccountInfo GetTestValue2()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.AccountInfo GetTestValue2()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.AccountInfo result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.AccountInfo();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.AccountInfo result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.AccountInfo();
          result.Nonce = this.GetTestValueU32();
          result.Consumers = this.GetTestValueU32();
          result.Providers = this.GetTestValueU32();
          result.Sufficients = this.GetTestValueU32();
-         result.Data = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData();
+         result.Data = new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData();
          result.Data = this.GetTestValue3();
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData GetTestValue3()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData GetTestValue3()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData();
          result.Free = this.GetTestValueU128();
          result.Reserved = this.GetTestValueU128();
          result.MiscFrozen = this.GetTestValueU128();
          result.FeeFrozen = this.GetTestValueU128();
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 GetTestValue4()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 GetTestValue4()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -103,8 +103,8 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.AccountInfo mockupValue = this.GetTestValue2();
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 mockupKey = this.GetTestValue4();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.AccountInfo mockupValue = this.GetTestValue2();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue4();
 
          Assert.IsTrue(await rpcClient.SubscribeAccount(mockupKey));
 
@@ -116,7 +116,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.AccountInfo rpcResult = await rpcClient.GetAccount(mockupKey);
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.AccountInfo rpcResult = await rpcClient.GetAccount(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -150,10 +150,10 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.PerDispatchClassT1 GetTestValue7()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.frame_support.weights.PerDispatchClassT1 GetTestValue7()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.PerDispatchClassT1 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.PerDispatchClassT1();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_support.weights.PerDispatchClassT1 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.frame_support.weights.PerDispatchClassT1();
          result.Normal = this.GetTestValueU64();
          result.Operational = this.GetTestValueU64();
          result.Mandatory = this.GetTestValueU64();
@@ -170,7 +170,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.PerDispatchClassT1 mockupValue = this.GetTestValue7();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_support.weights.PerDispatchClassT1 mockupValue = this.GetTestValue7();
 
 
          Assert.IsTrue(await rpcClient.SubscribeBlockWeight());
@@ -183,7 +183,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.PerDispatchClassT1 rpcResult = await rpcClient.GetBlockWeight();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_support.weights.PerDispatchClassT1 rpcResult = await rpcClient.GetBlockWeight();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -217,11 +217,11 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 GetTestValue10()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 GetTestValue10()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -268,7 +268,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 mockupValue = this.GetTestValue10();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue10();
          Ajuna.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeBlockHash(mockupKey));
@@ -281,7 +281,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 rpcResult = await rpcClient.GetBlockHash(mockupKey);
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 rpcResult = await rpcClient.GetBlockHash(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -352,11 +352,11 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 GetTestValue15()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 GetTestValue15()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -403,7 +403,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 mockupValue = this.GetTestValue15();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue15();
 
 
          Assert.IsTrue(await rpcClient.SubscribeParentHash());
@@ -416,38 +416,38 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 rpcResult = await rpcClient.GetParentHash();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 rpcResult = await rpcClient.GetParentHash();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.Digest GetTestValue17()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.Digest GetTestValue17()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.Digest result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.Digest();
-         result.Logs = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.EnumDigestItem>();
-         result.Logs.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.EnumDigestItem[] {
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.Digest result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.Digest();
+         result.Logs = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.EnumDigestItem>();
+         result.Logs.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.EnumDigestItem[] {
                   this.GetTestValue18()});
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.EnumDigestItem GetTestValue18()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.EnumDigestItem GetTestValue18()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.EnumDigestItem result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.EnumDigestItem();
-         result.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.DigestItem>(), this.GetTestValue19());
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.EnumDigestItem result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.EnumDigestItem();
+         result.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.DigestItem>(), this.GetTestValue19());
          return result;
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr4U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> GetTestValue19()
+      public Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr4U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> GetTestValue19()
       {
-         Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr4U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> result;
-         result = new Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr4U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>();
+         Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr4U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>> result;
+         result = new Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr4U8, Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>();
          result.Create(this.GetTestValue20(), this.GetTestValue21());
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr4U8 GetTestValue20()
+      public Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr4U8 GetTestValue20()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr4U8 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr4U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr4U8 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr4U8();
          result.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -474,7 +474,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.Digest mockupValue = this.GetTestValue17();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.Digest mockupValue = this.GetTestValue17();
 
 
          Assert.IsTrue(await rpcClient.SubscribeDigest());
@@ -487,37 +487,37 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime.Digest rpcResult = await rpcClient.GetDigest();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest.Digest rpcResult = await rpcClient.GetDigest();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EventRecord> GetTestValue23()
+      public Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EventRecord> GetTestValue23()
       {
-         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EventRecord> result;
-         result = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EventRecord>();
-         result.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EventRecord[] {
+         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EventRecord> result;
+         result = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EventRecord>();
+         result.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EventRecord[] {
                   this.GetTestValue24()});
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EventRecord GetTestValue24()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EventRecord GetTestValue24()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EventRecord result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EventRecord();
-         result.Phase = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EnumPhase();
-         result.Phase.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.Phase>(), this.GetTestValueU32());
-         result.Event = new Ajuna.SDK.Demos.NetApi.Generated.Model.NodeTemplateRuntime.EnumNodeEvent();
-         result.Event.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.NodeTemplateRuntime.NodeEvent>());
-         result.Topics = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256>();
-         result.Topics.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256[] {
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EventRecord result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EventRecord();
+         result.Phase = new Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EnumPhase();
+         result.Phase.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.Phase>(), this.GetTestValueU32());
+         result.Event = new Ajuna.SDK.Demos.NetApi.Generated.Model.node_runtime.EnumEvent();
+         result.Event.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.node_runtime.Event>());
+         result.Topics = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256>();
+         result.Topics.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256[] {
                   this.GetTestValue25()});
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 GetTestValue25()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 GetTestValue25()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -564,7 +564,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EventRecord> mockupValue = this.GetTestValue23();
+         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EventRecord> mockupValue = this.GetTestValue23();
 
 
          Assert.IsTrue(await rpcClient.SubscribeEvents());
@@ -577,7 +577,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EventRecord> rpcResult = await rpcClient.GetEvents();
+         Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EventRecord> rpcResult = await rpcClient.GetEvents();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -626,11 +626,11 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          result.Create(this.GetTestValueU32(), this.GetTestValueU32());
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 GetTestValue30()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 GetTestValue30()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -678,7 +678,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
          Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.NetApi.Model.Types.Base.BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue28();
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 mockupKey = this.GetTestValue30();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue30();
 
          Assert.IsTrue(await rpcClient.SubscribeEventTopics(mockupKey));
 
@@ -695,10 +695,10 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.LastRuntimeUpgradeInfo GetTestValue32()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.LastRuntimeUpgradeInfo GetTestValue32()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.LastRuntimeUpgradeInfo result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.LastRuntimeUpgradeInfo();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.LastRuntimeUpgradeInfo result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.LastRuntimeUpgradeInfo();
          result.SpecVersion = new Ajuna.NetApi.Model.Types.Base.BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>();
          result.SpecVersion.Create(new Ajuna.NetApi.CompactInteger(this.GetTestValueU32().Value));
          result.SpecName = this.GetTestValueStr();
@@ -715,7 +715,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.LastRuntimeUpgradeInfo mockupValue = this.GetTestValue32();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.LastRuntimeUpgradeInfo mockupValue = this.GetTestValue32();
 
 
          Assert.IsTrue(await rpcClient.SubscribeLastRuntimeUpgrade());
@@ -728,7 +728,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.LastRuntimeUpgradeInfo rpcResult = await rpcClient.GetLastRuntimeUpgrade();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.LastRuntimeUpgradeInfo rpcResult = await rpcClient.GetLastRuntimeUpgrade();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -791,11 +791,11 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EnumPhase GetTestValue36()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EnumPhase GetTestValue36()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EnumPhase result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EnumPhase();
-         result.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.Phase>(), this.GetTestValueU32());
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EnumPhase result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EnumPhase();
+         result.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.Phase>(), this.GetTestValueU32());
          return result;
       }
       [Test()]
@@ -809,7 +809,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EnumPhase mockupValue = this.GetTestValue36();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EnumPhase mockupValue = this.GetTestValue36();
 
 
          Assert.IsTrue(await rpcClient.SubscribeExecutionPhase());
@@ -822,7 +822,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.EnumPhase rpcResult = await rpcClient.GetExecutionPhase();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system.EnumPhase rpcResult = await rpcClient.GetExecutionPhase();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

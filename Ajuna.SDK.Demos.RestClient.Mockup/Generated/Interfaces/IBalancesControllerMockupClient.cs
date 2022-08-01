@@ -12,15 +12,16 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec;
    
    public interface IBalancesControllerMockupClient
    {
       Task<bool> SetTotalIssuance(U128 value);
-      Task<bool> SetAccount(AccountData value, Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
-      Task<bool> SetLocks(WeakBoundedVecT3 value, Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
-      Task<bool> SetReserves(BoundedVecT3 value, Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
+      Task<bool> SetAccount(AccountData value, Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetLocks(WeakBoundedVecT2 value, Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetReserves(BoundedVecT10 value, Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetStorageVersion(EnumReleases value);
    }
 }

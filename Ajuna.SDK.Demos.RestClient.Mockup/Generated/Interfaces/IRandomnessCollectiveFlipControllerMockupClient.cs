@@ -11,10 +11,10 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec;
    
    public interface IRandomnessCollectiveFlipControllerMockupClient
    {
-      Task<bool> SetRandomMaterial(BoundedVecT2 value);
+      Task<bool> SetRandomMaterial(BoundedVecT21 value);
    }
 }

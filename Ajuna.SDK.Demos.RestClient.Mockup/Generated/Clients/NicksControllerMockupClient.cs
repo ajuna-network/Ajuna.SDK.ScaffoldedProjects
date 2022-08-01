@@ -13,6 +13,8 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Ajuna.NetApi.Model.Types.Base;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.NetApi.Model.Types.Primitive;
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class NicksControllerMockupClient : MockupBaseClient, INicksControllerMockupClient
@@ -22,7 +24,7 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetNameOf(BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT4, Ajuna.NetApi.Model.Types.Primitive.U128> value, Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<bool> SetNameOf(BaseTuple<BoundedVecT4, U128> value, Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nicks/NameOf", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Model.PalletNicks.NicksStorage.NameOfParams(key));
       }

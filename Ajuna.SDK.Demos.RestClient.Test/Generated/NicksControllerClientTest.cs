@@ -16,6 +16,8 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients;
    using Ajuna.SDK.Demos.RestClient.Generated.Clients;
    using Ajuna.NetApi.Model.Types.Base;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.NetApi.Model.Types.Primitive;
    
    public class NicksControllerClientTest : ClientTestBase
    {

@@ -11,17 +11,17 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.frame_support.weights;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types;
    using Ajuna.NetApi.Model.Types.Base;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest;
    
    public interface ISystemControllerClient
    {
-      Task<AccountInfo> GetAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
-      Task<bool> SubscribeAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
+      Task<AccountInfo> GetAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SubscribeAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<U32> GetExtrinsicCount();
       Task<bool> SubscribeExtrinsicCount();
       Task<PerDispatchClassT1> GetBlockWeight();

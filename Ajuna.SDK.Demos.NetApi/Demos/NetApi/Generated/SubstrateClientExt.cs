@@ -9,6 +9,7 @@
 
 using Ajuna.NetApi.Model.Meta;
 using Ajuna.NetApi.Model.Types.Base;
+using Ajuna.SDK.Demos.NetApi.Generated.Storage;
 using System.Collections.Generic;
 
 
@@ -27,67 +28,331 @@ namespace Ajuna.SDK.Demos.NetApi.Generated
         /// <summary>
         /// SystemStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.SystemStorage SystemStorage;
+        public SystemStorage SystemStorage;
         
         /// <summary>
-        /// RandomnessCollectiveFlipStorage storage calls.
+        /// UtilityStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletRandomnessCollectiveFlip.RandomnessCollectiveFlipStorage RandomnessCollectiveFlipStorage;
+        public UtilityStorage UtilityStorage;
+        
+        /// <summary>
+        /// BabeStorage storage calls.
+        /// </summary>
+        public BabeStorage BabeStorage;
         
         /// <summary>
         /// TimestampStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTimestamp.TimestampStorage TimestampStorage;
+        public TimestampStorage TimestampStorage;
         
         /// <summary>
-        /// AuraStorage storage calls.
+        /// AuthorshipStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletAura.AuraStorage AuraStorage;
+        public AuthorshipStorage AuthorshipStorage;
         
         /// <summary>
-        /// GrandpaStorage storage calls.
+        /// IndicesStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletGrandpa.GrandpaStorage GrandpaStorage;
+        public IndicesStorage IndicesStorage;
         
         /// <summary>
         /// BalancesStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalancesStorage BalancesStorage;
+        public BalancesStorage BalancesStorage;
         
         /// <summary>
         /// TransactionPaymentStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.TransactionPaymentStorage TransactionPaymentStorage;
+        public TransactionPaymentStorage TransactionPaymentStorage;
+        
+        /// <summary>
+        /// AssetTxPaymentStorage storage calls.
+        /// </summary>
+        public AssetTxPaymentStorage AssetTxPaymentStorage;
+        
+        /// <summary>
+        /// ElectionProviderMultiPhaseStorage storage calls.
+        /// </summary>
+        public ElectionProviderMultiPhaseStorage ElectionProviderMultiPhaseStorage;
+        
+        /// <summary>
+        /// StakingStorage storage calls.
+        /// </summary>
+        public StakingStorage StakingStorage;
+        
+        /// <summary>
+        /// SessionStorage storage calls.
+        /// </summary>
+        public SessionStorage SessionStorage;
+        
+        /// <summary>
+        /// DemocracyStorage storage calls.
+        /// </summary>
+        public DemocracyStorage DemocracyStorage;
+        
+        /// <summary>
+        /// CouncilStorage storage calls.
+        /// </summary>
+        public CouncilStorage CouncilStorage;
+        
+        /// <summary>
+        /// TechnicalCommitteeStorage storage calls.
+        /// </summary>
+        public TechnicalCommitteeStorage TechnicalCommitteeStorage;
+        
+        /// <summary>
+        /// ElectionsStorage storage calls.
+        /// </summary>
+        public ElectionsStorage ElectionsStorage;
+        
+        /// <summary>
+        /// TechnicalMembershipStorage storage calls.
+        /// </summary>
+        public TechnicalMembershipStorage TechnicalMembershipStorage;
+        
+        /// <summary>
+        /// GrandpaStorage storage calls.
+        /// </summary>
+        public GrandpaStorage GrandpaStorage;
+        
+        /// <summary>
+        /// TreasuryStorage storage calls.
+        /// </summary>
+        public TreasuryStorage TreasuryStorage;
+        
+        /// <summary>
+        /// ContractsStorage storage calls.
+        /// </summary>
+        public ContractsStorage ContractsStorage;
         
         /// <summary>
         /// SudoStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletSudo.SudoStorage SudoStorage;
+        public SudoStorage SudoStorage;
         
         /// <summary>
-        /// TemplateModuleStorage storage calls.
+        /// ImOnlineStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTemplateModule.TemplateModuleStorage TemplateModuleStorage;
+        public ImOnlineStorage ImOnlineStorage;
         
         /// <summary>
-        /// NicksStorage storage calls.
+        /// AuthorityDiscoveryStorage storage calls.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletNicks.NicksStorage NicksStorage;
+        public AuthorityDiscoveryStorage AuthorityDiscoveryStorage;
+        
+        /// <summary>
+        /// OffencesStorage storage calls.
+        /// </summary>
+        public OffencesStorage OffencesStorage;
+        
+        /// <summary>
+        /// HistoricalStorage storage calls.
+        /// </summary>
+        public HistoricalStorage HistoricalStorage;
+        
+        /// <summary>
+        /// RandomnessCollectiveFlipStorage storage calls.
+        /// </summary>
+        public RandomnessCollectiveFlipStorage RandomnessCollectiveFlipStorage;
+        
+        /// <summary>
+        /// IdentityStorage storage calls.
+        /// </summary>
+        public IdentityStorage IdentityStorage;
+        
+        /// <summary>
+        /// SocietyStorage storage calls.
+        /// </summary>
+        public SocietyStorage SocietyStorage;
+        
+        /// <summary>
+        /// RecoveryStorage storage calls.
+        /// </summary>
+        public RecoveryStorage RecoveryStorage;
+        
+        /// <summary>
+        /// VestingStorage storage calls.
+        /// </summary>
+        public VestingStorage VestingStorage;
+        
+        /// <summary>
+        /// SchedulerStorage storage calls.
+        /// </summary>
+        public SchedulerStorage SchedulerStorage;
+        
+        /// <summary>
+        /// PreimageStorage storage calls.
+        /// </summary>
+        public PreimageStorage PreimageStorage;
+        
+        /// <summary>
+        /// ProxyStorage storage calls.
+        /// </summary>
+        public ProxyStorage ProxyStorage;
+        
+        /// <summary>
+        /// MultisigStorage storage calls.
+        /// </summary>
+        public MultisigStorage MultisigStorage;
+        
+        /// <summary>
+        /// BountiesStorage storage calls.
+        /// </summary>
+        public BountiesStorage BountiesStorage;
+        
+        /// <summary>
+        /// TipsStorage storage calls.
+        /// </summary>
+        public TipsStorage TipsStorage;
+        
+        /// <summary>
+        /// AssetsStorage storage calls.
+        /// </summary>
+        public AssetsStorage AssetsStorage;
+        
+        /// <summary>
+        /// MmrStorage storage calls.
+        /// </summary>
+        public MmrStorage MmrStorage;
+        
+        /// <summary>
+        /// LotteryStorage storage calls.
+        /// </summary>
+        public LotteryStorage LotteryStorage;
+        
+        /// <summary>
+        /// GiltStorage storage calls.
+        /// </summary>
+        public GiltStorage GiltStorage;
+        
+        /// <summary>
+        /// UniquesStorage storage calls.
+        /// </summary>
+        public UniquesStorage UniquesStorage;
+        
+        /// <summary>
+        /// TransactionStorageStorage storage calls.
+        /// </summary>
+        public TransactionStorageStorage TransactionStorageStorage;
+        
+        /// <summary>
+        /// BagsListStorage storage calls.
+        /// </summary>
+        public BagsListStorage BagsListStorage;
+        
+        /// <summary>
+        /// StateTrieMigrationStorage storage calls.
+        /// </summary>
+        public StateTrieMigrationStorage StateTrieMigrationStorage;
+        
+        /// <summary>
+        /// ChildBountiesStorage storage calls.
+        /// </summary>
+        public ChildBountiesStorage ChildBountiesStorage;
+        
+        /// <summary>
+        /// ReferendaStorage storage calls.
+        /// </summary>
+        public ReferendaStorage ReferendaStorage;
+        
+        /// <summary>
+        /// RemarkStorage storage calls.
+        /// </summary>
+        public RemarkStorage RemarkStorage;
+        
+        /// <summary>
+        /// ConvictionVotingStorage storage calls.
+        /// </summary>
+        public ConvictionVotingStorage ConvictionVotingStorage;
+        
+        /// <summary>
+        /// WhitelistStorage storage calls.
+        /// </summary>
+        public WhitelistStorage WhitelistStorage;
+        
+        /// <summary>
+        /// AllianceMotionStorage storage calls.
+        /// </summary>
+        public AllianceMotionStorage AllianceMotionStorage;
+        
+        /// <summary>
+        /// AllianceStorage storage calls.
+        /// </summary>
+        public AllianceStorage AllianceStorage;
+        
+        /// <summary>
+        /// NominationPoolsStorage storage calls.
+        /// </summary>
+        public NominationPoolsStorage NominationPoolsStorage;
+        
+        /// <summary>
+        /// RankedPollsStorage storage calls.
+        /// </summary>
+        public RankedPollsStorage RankedPollsStorage;
+        
+        /// <summary>
+        /// RankedCollectiveStorage storage calls.
+        /// </summary>
+        public RankedCollectiveStorage RankedCollectiveStorage;
         
         public SubstrateClientExt(System.Uri uri) : 
                 base(uri)
         {
             StorageKeyDict = new System.Collections.Generic.Dictionary<System.Tuple<string, string>, System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>>();
-            this.SystemStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem.SystemStorage(this);
-            this.RandomnessCollectiveFlipStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletRandomnessCollectiveFlip.RandomnessCollectiveFlipStorage(this);
-            this.TimestampStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTimestamp.TimestampStorage(this);
-            this.AuraStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletAura.AuraStorage(this);
-            this.GrandpaStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletGrandpa.GrandpaStorage(this);
-            this.BalancesStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalancesStorage(this);
-            this.TransactionPaymentStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.TransactionPaymentStorage(this);
-            this.SudoStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletSudo.SudoStorage(this);
-            this.TemplateModuleStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTemplateModule.TemplateModuleStorage(this);
-            this.NicksStorage = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletNicks.NicksStorage(this);
+            this.SystemStorage = new SystemStorage(this);
+            this.UtilityStorage = new UtilityStorage(this);
+            this.BabeStorage = new BabeStorage(this);
+            this.TimestampStorage = new TimestampStorage(this);
+            this.AuthorshipStorage = new AuthorshipStorage(this);
+            this.IndicesStorage = new IndicesStorage(this);
+            this.BalancesStorage = new BalancesStorage(this);
+            this.TransactionPaymentStorage = new TransactionPaymentStorage(this);
+            this.AssetTxPaymentStorage = new AssetTxPaymentStorage(this);
+            this.ElectionProviderMultiPhaseStorage = new ElectionProviderMultiPhaseStorage(this);
+            this.StakingStorage = new StakingStorage(this);
+            this.SessionStorage = new SessionStorage(this);
+            this.DemocracyStorage = new DemocracyStorage(this);
+            this.CouncilStorage = new CouncilStorage(this);
+            this.TechnicalCommitteeStorage = new TechnicalCommitteeStorage(this);
+            this.ElectionsStorage = new ElectionsStorage(this);
+            this.TechnicalMembershipStorage = new TechnicalMembershipStorage(this);
+            this.GrandpaStorage = new GrandpaStorage(this);
+            this.TreasuryStorage = new TreasuryStorage(this);
+            this.ContractsStorage = new ContractsStorage(this);
+            this.SudoStorage = new SudoStorage(this);
+            this.ImOnlineStorage = new ImOnlineStorage(this);
+            this.AuthorityDiscoveryStorage = new AuthorityDiscoveryStorage(this);
+            this.OffencesStorage = new OffencesStorage(this);
+            this.HistoricalStorage = new HistoricalStorage(this);
+            this.RandomnessCollectiveFlipStorage = new RandomnessCollectiveFlipStorage(this);
+            this.IdentityStorage = new IdentityStorage(this);
+            this.SocietyStorage = new SocietyStorage(this);
+            this.RecoveryStorage = new RecoveryStorage(this);
+            this.VestingStorage = new VestingStorage(this);
+            this.SchedulerStorage = new SchedulerStorage(this);
+            this.PreimageStorage = new PreimageStorage(this);
+            this.ProxyStorage = new ProxyStorage(this);
+            this.MultisigStorage = new MultisigStorage(this);
+            this.BountiesStorage = new BountiesStorage(this);
+            this.TipsStorage = new TipsStorage(this);
+            this.AssetsStorage = new AssetsStorage(this);
+            this.MmrStorage = new MmrStorage(this);
+            this.LotteryStorage = new LotteryStorage(this);
+            this.GiltStorage = new GiltStorage(this);
+            this.UniquesStorage = new UniquesStorage(this);
+            this.TransactionStorageStorage = new TransactionStorageStorage(this);
+            this.BagsListStorage = new BagsListStorage(this);
+            this.StateTrieMigrationStorage = new StateTrieMigrationStorage(this);
+            this.ChildBountiesStorage = new ChildBountiesStorage(this);
+            this.ReferendaStorage = new ReferendaStorage(this);
+            this.RemarkStorage = new RemarkStorage(this);
+            this.ConvictionVotingStorage = new ConvictionVotingStorage(this);
+            this.WhitelistStorage = new WhitelistStorage(this);
+            this.AllianceMotionStorage = new AllianceMotionStorage(this);
+            this.AllianceStorage = new AllianceStorage(this);
+            this.NominationPoolsStorage = new NominationPoolsStorage(this);
+            this.RankedPollsStorage = new RankedPollsStorage(this);
+            this.RankedCollectiveStorage = new RankedCollectiveStorage(this);
         }
     }
 }

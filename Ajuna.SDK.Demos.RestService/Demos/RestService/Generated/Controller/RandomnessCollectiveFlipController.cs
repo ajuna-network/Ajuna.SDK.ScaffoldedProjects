@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Ajuna.NetApi.Model.Types.Base;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
 using Ajuna.SDK.Demos.RestService.Generated.Storage;
 using Ajuna.ServiceLayer.Attributes;
 using Microsoft.AspNetCore.Mvc;
@@ -45,8 +44,8 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Controller
         ///  the oldest hash.
         /// </summary>
         [HttpGet("RandomMaterial")]
-        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2), 200)]
-        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletRandomnessCollectiveFlip.RandomnessCollectiveFlipStorage), "RandomMaterialParams")]
+        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21), 200)]
+        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Storage.RandomnessCollectiveFlipStorage), "RandomMaterialParams")]
         public IActionResult GetRandomMaterial()
         {
             return this.Ok(_randomnessCollectiveFlipStorage.GetRandomMaterial());

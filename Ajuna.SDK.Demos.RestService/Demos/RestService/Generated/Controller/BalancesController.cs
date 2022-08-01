@@ -8,10 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Ajuna.NetApi.Model.Types.Base;
-using Ajuna.NetApi.Model.Types.Primitive;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
 using Ajuna.SDK.Demos.RestService.Generated.Storage;
 using Ajuna.ServiceLayer.Attributes;
 using Microsoft.AspNetCore.Mvc;
@@ -47,7 +43,7 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Controller
         /// </summary>
         [HttpGet("TotalIssuance")]
         [ProducesResponseType(typeof(Ajuna.NetApi.Model.Types.Primitive.U128), 200)]
-        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalancesStorage), "TotalIssuanceParams")]
+        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage), "TotalIssuanceParams")]
         public IActionResult GetTotalIssuance()
         {
             return this.Ok(_balancesStorage.GetTotalIssuance());
@@ -81,8 +77,8 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Controller
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
         [HttpGet("Account")]
-        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData), 200)]
-        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalancesStorage), "AccountParams", typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32))]
+        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData), 200)]
+        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage), "AccountParams", typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetAccount(string key)
         {
             return this.Ok(_balancesStorage.GetAccount(key));
@@ -94,8 +90,8 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Controller
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
         [HttpGet("Locks")]
-        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.WeakBoundedVecT3), 200)]
-        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalancesStorage), "LocksParams", typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32))]
+        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2), 200)]
+        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage), "LocksParams", typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLocks(string key)
         {
             return this.Ok(_balancesStorage.GetLocks(key));
@@ -106,8 +102,8 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Controller
         ///  Named reserves on some account balances.
         /// </summary>
         [HttpGet("Reserves")]
-        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT3), 200)]
-        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalancesStorage), "ReservesParams", typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32))]
+        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT10), 200)]
+        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage), "ReservesParams", typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetReserves(string key)
         {
             return this.Ok(_balancesStorage.GetReserves(key));
@@ -120,8 +116,8 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Controller
         ///  This is set to v2.0.0 for new networks.
         /// </summary>
         [HttpGet("StorageVersion")]
-        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.EnumReleases), 200)]
-        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalancesStorage), "StorageVersionParams")]
+        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.EnumReleases), 200)]
+        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Storage.BalancesStorage), "StorageVersionParams")]
         public IActionResult GetStorageVersion()
         {
             return this.Ok(_balancesStorage.GetStorageVersion());

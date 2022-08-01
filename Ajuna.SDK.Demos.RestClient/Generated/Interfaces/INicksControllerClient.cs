@@ -12,10 +12,12 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Ajuna.NetApi.Model.Types.Base;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface INicksControllerClient
    {
-      Task<BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT4, Ajuna.NetApi.Model.Types.Primitive.U128>> GetNameOf(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
+      Task<BaseTuple<BoundedVecT4, U128>> GetNameOf(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
       Task<bool> SubscribeNameOf(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
    }
 }

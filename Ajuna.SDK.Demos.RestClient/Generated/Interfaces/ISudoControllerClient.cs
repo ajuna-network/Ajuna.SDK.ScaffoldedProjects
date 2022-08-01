@@ -11,7 +11,7 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto;
    
    public interface ISudoControllerClient
    {

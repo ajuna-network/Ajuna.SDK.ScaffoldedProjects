@@ -12,9 +12,11 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Ajuna.NetApi.Model.Types.Base;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface INicksControllerMockupClient
    {
-      Task<bool> SetNameOf(BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT4, Ajuna.NetApi.Model.Types.Primitive.U128> value, Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
+      Task<bool> SetNameOf(BaseTuple<BoundedVecT4, U128> value, Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
    }
 }

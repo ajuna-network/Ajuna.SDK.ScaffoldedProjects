@@ -8,8 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Ajuna.NetApi.Model.Types.Base;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic;
 using Ajuna.ServiceLayer.Attributes;
 using Ajuna.ServiceLayer.Storage;
 using System.Collections.Generic;
@@ -29,12 +27,12 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         /// <summary>
         /// >> NextFeeMultiplier
         /// </summary>
-        Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128 GetNextFeeMultiplier();
+        Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetNextFeeMultiplier();
         
         /// <summary>
         /// >> StorageVersion
         /// </summary>
-        Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases GetStorageVersion();
+        Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases GetStorageVersion();
     }
     
     /// <summary>
@@ -46,26 +44,26 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         /// <summary>
         /// _nextFeeMultiplierTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128> _nextFeeMultiplierTypedStorage;
+        private TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128> _nextFeeMultiplierTypedStorage;
         
         /// <summary>
         /// _storageVersionTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases> _storageVersionTypedStorage;
+        private TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases> _storageVersionTypedStorage;
         
         /// <summary>
         /// TransactionPaymentStorage constructor.
         /// </summary>
         public TransactionPaymentStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.NextFeeMultiplierTypedStorage = new TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128>("TransactionPayment.NextFeeMultiplier", storageDataProvider, storageChangeDelegates);
-            this.StorageVersionTypedStorage = new TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases>("TransactionPayment.StorageVersion", storageDataProvider, storageChangeDelegates);
+            this.NextFeeMultiplierTypedStorage = new TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128>("TransactionPayment.NextFeeMultiplier", storageDataProvider, storageChangeDelegates);
+            this.StorageVersionTypedStorage = new TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases>("TransactionPayment.StorageVersion", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _nextFeeMultiplierTypedStorage property
         /// </summary>
-        public TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128> NextFeeMultiplierTypedStorage
+        public TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128> NextFeeMultiplierTypedStorage
         {
             get
             {
@@ -80,7 +78,7 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         /// <summary>
         /// _storageVersionTypedStorage property
         /// </summary>
-        public TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases> StorageVersionTypedStorage
+        public TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases> StorageVersionTypedStorage
         {
             get
             {
@@ -113,7 +111,7 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         /// <summary>
         /// >> NextFeeMultiplier
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128 GetNextFeeMultiplier()
+        public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetNextFeeMultiplier()
         {
             return NextFeeMultiplierTypedStorage.Get();
         }
@@ -130,7 +128,7 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         /// <summary>
         /// >> StorageVersion
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases GetStorageVersion()
+        public Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases GetStorageVersion()
         {
             return StorageVersionTypedStorage.Get();
         }

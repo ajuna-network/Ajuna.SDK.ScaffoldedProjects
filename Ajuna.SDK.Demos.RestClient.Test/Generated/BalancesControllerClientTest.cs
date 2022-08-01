@@ -16,8 +16,9 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients;
    using Ajuna.SDK.Demos.RestClient.Generated.Clients;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec;
    
    public class BalancesControllerClientTest : ClientTestBase
    {
@@ -56,21 +57,21 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData GetTestValue3()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData GetTestValue3()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData();
          result.Free = this.GetTestValueU128();
          result.Reserved = this.GetTestValueU128();
          result.MiscFrozen = this.GetTestValueU128();
          result.FeeFrozen = this.GetTestValueU128();
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 GetTestValue4()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 GetTestValue4()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -117,8 +118,8 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData mockupValue = this.GetTestValue3();
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 mockupKey = this.GetTestValue4();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData mockupValue = this.GetTestValue3();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue4();
 
          Assert.IsTrue(await rpcClient.SubscribeAccount(mockupKey));
 
@@ -130,25 +131,25 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.AccountData rpcResult = await rpcClient.GetAccount(mockupKey);
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.AccountData rpcResult = await rpcClient.GetAccount(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.WeakBoundedVecT3 GetTestValue6()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 GetTestValue6()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.WeakBoundedVecT3 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.WeakBoundedVecT3();
-         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalanceLock>();
-         result.Value.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalanceLock[] {
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.BalanceLock>();
+         result.Value.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.BalanceLock[] {
                   this.GetTestValue7()});
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalanceLock GetTestValue7()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.BalanceLock GetTestValue7()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalanceLock result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.BalanceLock();
-         result.Id = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr8U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.BalanceLock result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.BalanceLock();
+         result.Id = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr8U8();
          result.Id.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -159,15 +160,15 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
                   this.GetTestValueU8(),
                   this.GetTestValueU8()});
          result.Amount = this.GetTestValueU128();
-         result.Reasons = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.EnumReasons();
-         result.Reasons.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.Reasons>());
+         result.Reasons = new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.EnumReasons();
+         result.Reasons.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.Reasons>());
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 GetTestValue8()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 GetTestValue8()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -214,8 +215,8 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.WeakBoundedVecT3 mockupValue = this.GetTestValue6();
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 mockupKey = this.GetTestValue8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 mockupValue = this.GetTestValue6();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue8();
 
          Assert.IsTrue(await rpcClient.SubscribeLocks(mockupKey));
 
@@ -227,25 +228,25 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.WeakBoundedVecT3 rpcResult = await rpcClient.GetLocks(mockupKey);
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec.WeakBoundedVecT2 rpcResult = await rpcClient.GetLocks(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT3 GetTestValue10()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT10 GetTestValue10()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT3 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT3();
-         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.ReserveData>();
-         result.Value.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.ReserveData[] {
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT10 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT10();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.ReserveData>();
+         result.Value.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.ReserveData[] {
                   this.GetTestValue11()});
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.ReserveData GetTestValue11()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.ReserveData GetTestValue11()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.ReserveData result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.ReserveData();
-         result.Id = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr8U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.ReserveData result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.ReserveData();
+         result.Id = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr8U8();
          result.Id.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -258,11 +259,11 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          result.Amount = this.GetTestValueU128();
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 GetTestValue12()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 GetTestValue12()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -309,8 +310,8 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT3 mockupValue = this.GetTestValue10();
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 mockupKey = this.GetTestValue12();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT10 mockupValue = this.GetTestValue10();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue12();
 
          Assert.IsTrue(await rpcClient.SubscribeReserves(mockupKey));
 
@@ -322,16 +323,16 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT3 rpcResult = await rpcClient.GetReserves(mockupKey);
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT10 rpcResult = await rpcClient.GetReserves(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.EnumReleases GetTestValue14()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.EnumReleases GetTestValue14()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.EnumReleases result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.EnumReleases();
-         result.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.Releases>());
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.EnumReleases result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.EnumReleases();
+         result.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.Releases>());
          return result;
       }
       [Test()]
@@ -345,7 +346,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.EnumReleases mockupValue = this.GetTestValue14();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.EnumReleases mockupValue = this.GetTestValue14();
 
 
          Assert.IsTrue(await rpcClient.SubscribeStorageVersion());
@@ -358,7 +359,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances.EnumReleases rpcResult = await rpcClient.GetStorageVersion();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances.EnumReleases rpcResult = await rpcClient.GetStorageVersion();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

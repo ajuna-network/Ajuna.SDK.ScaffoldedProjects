@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Ajuna.NetApi.Model.Types.Base;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
 using Ajuna.ServiceLayer.Attributes;
 using Ajuna.ServiceLayer.Storage;
 using System.Collections.Generic;
@@ -29,7 +28,7 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         /// >> Key
         ///  The `AccountId` of the sudo key.
         /// </summary>
-        Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 GetKey();
+        Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 GetKey();
     }
     
     /// <summary>
@@ -41,20 +40,20 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         /// <summary>
         /// _keyTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32> _keyTypedStorage;
+        private TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32> _keyTypedStorage;
         
         /// <summary>
         /// SudoStorage constructor.
         /// </summary>
         public SudoStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.KeyTypedStorage = new TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32>("Sudo.Key", storageDataProvider, storageChangeDelegates);
+            this.KeyTypedStorage = new TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32>("Sudo.Key", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _keyTypedStorage property
         /// </summary>
-        public TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32> KeyTypedStorage
+        public TypedStorage<Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32> KeyTypedStorage
         {
             get
             {
@@ -87,7 +86,7 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Storage
         /// >> Key
         ///  The `AccountId` of the sudo key.
         /// </summary>
-        public Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 GetKey()
+        public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 GetKey()
         {
             return KeyTypedStorage.Get();
         }

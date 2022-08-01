@@ -11,8 +11,8 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment;
    
    public interface ITransactionPaymentControllerMockupClient
    {

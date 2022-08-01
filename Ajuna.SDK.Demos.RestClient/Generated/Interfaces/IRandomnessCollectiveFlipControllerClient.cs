@@ -11,11 +11,11 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec;
    
    public interface IRandomnessCollectiveFlipControllerClient
    {
-      Task<BoundedVecT2> GetRandomMaterial();
+      Task<BoundedVecT21> GetRandomMaterial();
       Task<bool> SubscribeRandomMaterial();
    }
 }

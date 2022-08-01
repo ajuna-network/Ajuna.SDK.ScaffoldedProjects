@@ -12,12 +12,12 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.frame_support.weights;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types;
    using Ajuna.NetApi.Model.Types.Base;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest;
    using Ajuna.SDK.Demos.RestClient.Generated.Interfaces;
    
    public sealed class SystemControllerClient : BaseClient, ISystemControllerClient
@@ -29,13 +29,13 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<AccountInfo> GetAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<AccountInfo> GetAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<AccountInfo>(_httpClient, "system/account", SystemStorage.AccountParams(key));
+         return await SendRequestAsync<AccountInfo>(_httpClient, "system/account", Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.AccountParams(key));
       }
-      public async Task<bool> SubscribeAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<bool> SubscribeAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("System.Account", SystemStorage.AccountParams(key));
+         return await _subscriptionClient.SubscribeAsync("System.Account", Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.AccountParams(key));
       }
       public async Task<U32> GetExtrinsicCount()
       {
@@ -63,19 +63,19 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
       }
       public async Task<H256> GetBlockHash(U32 key)
       {
-         return await SendRequestAsync<H256>(_httpClient, "system/blockhash", SystemStorage.BlockHashParams(key));
+         return await SendRequestAsync<H256>(_httpClient, "system/blockhash", Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.BlockHashParams(key));
       }
       public async Task<bool> SubscribeBlockHash(U32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("System.BlockHash", SystemStorage.BlockHashParams(key));
+         return await _subscriptionClient.SubscribeAsync("System.BlockHash", Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.BlockHashParams(key));
       }
       public async Task<BaseVec<U8>> GetExtrinsicData(U32 key)
       {
-         return await SendRequestAsync<BaseVec<U8>>(_httpClient, "system/extrinsicdata", SystemStorage.ExtrinsicDataParams(key));
+         return await SendRequestAsync<BaseVec<U8>>(_httpClient, "system/extrinsicdata", Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.ExtrinsicDataParams(key));
       }
       public async Task<bool> SubscribeExtrinsicData(U32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("System.ExtrinsicData", SystemStorage.ExtrinsicDataParams(key));
+         return await _subscriptionClient.SubscribeAsync("System.ExtrinsicData", Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.ExtrinsicDataParams(key));
       }
       public async Task<U32> GetNumber()
       {
@@ -119,11 +119,11 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
       }
       public async Task<BaseVec<BaseTuple<U32, U32>>> GetEventTopics(H256 key)
       {
-         return await SendRequestAsync<BaseVec<BaseTuple<U32, U32>>>(_httpClient, "system/eventtopics", SystemStorage.EventTopicsParams(key));
+         return await SendRequestAsync<BaseVec<BaseTuple<U32, U32>>>(_httpClient, "system/eventtopics", Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.EventTopicsParams(key));
       }
       public async Task<bool> SubscribeEventTopics(H256 key)
       {
-         return await _subscriptionClient.SubscribeAsync("System.EventTopics", SystemStorage.EventTopicsParams(key));
+         return await _subscriptionClient.SubscribeAsync("System.EventTopics", Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.EventTopicsParams(key));
       }
       public async Task<LastRuntimeUpgradeInfo> GetLastRuntimeUpgrade()
       {

@@ -8,8 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Ajuna.NetApi.Model.Types.Base;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic;
 using Ajuna.SDK.Demos.RestService.Generated.Storage;
 using Ajuna.ServiceLayer.Attributes;
 using Microsoft.AspNetCore.Mvc;
@@ -43,8 +41,8 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Controller
         /// >> NextFeeMultiplier
         /// </summary>
         [HttpGet("NextFeeMultiplier")]
-        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128), 200)]
-        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.TransactionPaymentStorage), "NextFeeMultiplierParams")]
+        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128), 200)]
+        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Storage.TransactionPaymentStorage), "NextFeeMultiplierParams")]
         public IActionResult GetNextFeeMultiplier()
         {
             return this.Ok(_transactionPaymentStorage.GetNextFeeMultiplier());
@@ -54,8 +52,8 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Controller
         /// >> StorageVersion
         /// </summary>
         [HttpGet("StorageVersion")]
-        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases), 200)]
-        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.TransactionPaymentStorage), "StorageVersionParams")]
+        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases), 200)]
+        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Storage.TransactionPaymentStorage), "StorageVersionParams")]
         public IActionResult GetStorageVersion()
         {
             return this.Ok(_transactionPaymentStorage.GetStorageVersion());

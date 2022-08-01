@@ -12,7 +12,7 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto;
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class SudoControllerMockupClient : MockupBaseClient, ISudoControllerMockupClient
@@ -24,7 +24,7 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
       }
       public async Task<bool> SetKey(AccountId32 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "Sudo/Key", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Model.PalletSudo.SudoStorage.KeyParams());
+         return await SendMockupRequestAsync(_httpClient, "Sudo/Key", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SudoStorage.KeyParams());
       }
    }
 }

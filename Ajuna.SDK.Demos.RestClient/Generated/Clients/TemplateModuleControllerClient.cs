@@ -13,6 +13,8 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Ajuna.NetApi.Model.Types.Base;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
+   using Ajuna.NetApi.Model.Types.Primitive;
    using Ajuna.SDK.Demos.RestClient.Generated.Interfaces;
    
    public sealed class TemplateModuleControllerClient : BaseClient, ITemplateModuleControllerClient
@@ -24,9 +26,9 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U32>> GetProofs(Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT1 key)
+      public async Task<BaseTuple<AccountId32, U32>> GetProofs(Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT1 key)
       {
-         return await SendRequestAsync<BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U32>>(_httpClient, "templatemodule/proofs", Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTemplateModule.TemplateModuleStorage.ProofsParams(key));
+         return await SendRequestAsync<BaseTuple<AccountId32, U32>>(_httpClient, "templatemodule/proofs", Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTemplateModule.TemplateModuleStorage.ProofsParams(key));
       }
       public async Task<bool> SubscribeProofs(Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT1 key)
       {

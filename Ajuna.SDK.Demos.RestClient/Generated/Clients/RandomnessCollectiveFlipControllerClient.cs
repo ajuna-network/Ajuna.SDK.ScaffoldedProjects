@@ -12,7 +12,7 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec;
    using Ajuna.SDK.Demos.RestClient.Generated.Interfaces;
    
    public sealed class RandomnessCollectiveFlipControllerClient : BaseClient, IRandomnessCollectiveFlipControllerClient
@@ -24,9 +24,9 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT2> GetRandomMaterial()
+      public async Task<BoundedVecT21> GetRandomMaterial()
       {
-         return await SendRequestAsync<BoundedVecT2>(_httpClient, "randomnesscollectiveflip/randommaterial");
+         return await SendRequestAsync<BoundedVecT21>(_httpClient, "randomnesscollectiveflip/randommaterial");
       }
       public async Task<bool> SubscribeRandomMaterial()
       {

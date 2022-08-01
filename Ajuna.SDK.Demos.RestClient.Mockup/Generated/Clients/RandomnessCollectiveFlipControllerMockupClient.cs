@@ -12,7 +12,7 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec;
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class RandomnessCollectiveFlipControllerMockupClient : MockupBaseClient, IRandomnessCollectiveFlipControllerMockupClient
@@ -22,9 +22,9 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetRandomMaterial(BoundedVecT2 value)
+      public async Task<bool> SetRandomMaterial(BoundedVecT21 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "RandomnessCollectiveFlip/RandomMaterial", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Model.PalletRandomnessCollectiveFlip.RandomnessCollectiveFlipStorage.RandomMaterialParams());
+         return await SendMockupRequestAsync(_httpClient, "RandomnessCollectiveFlip/RandomMaterial", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.RandomnessCollectiveFlipStorage.RandomMaterialParams());
       }
    }
 }

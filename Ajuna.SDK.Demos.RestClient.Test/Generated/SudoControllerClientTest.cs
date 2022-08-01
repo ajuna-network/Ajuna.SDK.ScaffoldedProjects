@@ -15,7 +15,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
    using System.Net.Http;
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients;
    using Ajuna.SDK.Demos.RestClient.Generated.Clients;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto;
    
    public class SudoControllerClientTest : ClientTestBase
    {
@@ -25,11 +25,11 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 GetTestValue2()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 GetTestValue2()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -76,7 +76,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SudoControllerClient rpcClient = new SudoControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 mockupValue = this.GetTestValue2();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeKey());
@@ -89,7 +89,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 rpcResult = await rpcClient.GetKey();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 rpcResult = await rpcClient.GetKey();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

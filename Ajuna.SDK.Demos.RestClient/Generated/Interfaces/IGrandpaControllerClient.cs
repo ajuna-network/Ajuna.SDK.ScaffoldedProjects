@@ -11,7 +11,7 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletGrandpa;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_grandpa;
    using Ajuna.NetApi.Model.Types.Primitive;
    using Ajuna.NetApi.Model.Types.Base;
    

@@ -15,8 +15,8 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
    using System.Net.Http;
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients;
    using Ajuna.SDK.Demos.RestClient.Generated.Clients;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment;
    
    public class TransactionPaymentControllerClientTest : ClientTestBase
    {
@@ -26,10 +26,10 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128 GetTestValue2()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetTestValue2()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128();
          result.Value = this.GetTestValueU128();
          return result;
       }
@@ -44,7 +44,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          TransactionPaymentControllerClient rpcClient = new TransactionPaymentControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128 mockupValue = this.GetTestValue2();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeNextFeeMultiplier());
@@ -57,16 +57,16 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.SpArithmetic.FixedU128 rpcResult = await rpcClient.GetNextFeeMultiplier();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_arithmetic.fixed_point.FixedU128 rpcResult = await rpcClient.GetNextFeeMultiplier();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases GetTestValue4()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases GetTestValue4()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases();
-         result.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.Releases>());
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases();
+         result.Create(this.GetTestValueEnum<Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.Releases>());
          return result;
       }
       [Test()]
@@ -80,7 +80,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          TransactionPaymentControllerClient rpcClient = new TransactionPaymentControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases mockupValue = this.GetTestValue4();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases mockupValue = this.GetTestValue4();
 
 
          Assert.IsTrue(await rpcClient.SubscribeStorageVersion());
@@ -93,7 +93,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTransactionPayment.EnumReleases rpcResult = await rpcClient.GetStorageVersion();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_transaction_payment.EnumReleases rpcResult = await rpcClient.GetStorageVersion();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

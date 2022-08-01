@@ -13,6 +13,8 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Ajuna.NetApi.Model.Types.Base;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
+   using Ajuna.NetApi.Model.Types.Primitive;
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class TemplateModuleControllerMockupClient : MockupBaseClient, ITemplateModuleControllerMockupClient
@@ -22,7 +24,7 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProofs(BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U32> value, Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT1 key)
+      public async Task<bool> SetProofs(BaseTuple<AccountId32, U32> value, Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT1 key)
       {
          return await SendMockupRequestAsync(_httpClient, "TemplateModule/Proofs", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Model.PalletTemplateModule.TemplateModuleStorage.ProofsParams(key));
       }

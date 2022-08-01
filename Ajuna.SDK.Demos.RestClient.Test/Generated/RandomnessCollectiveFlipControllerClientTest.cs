@@ -15,7 +15,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
    using System.Net.Http;
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients;
    using Ajuna.SDK.Demos.RestClient.Generated.Clients;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec;
    
    public class RandomnessCollectiveFlipControllerClientTest : ClientTestBase
    {
@@ -25,20 +25,20 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2 GetTestValue2()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 GetTestValue2()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2();
-         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256>();
-         result.Value.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256[] {
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21();
+         result.Value = new Ajuna.NetApi.Model.Types.Base.BaseVec<Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256>();
+         result.Value.Create(new Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256[] {
                   this.GetTestValue3()});
          return result;
       }
-      public Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 GetTestValue3()
+      public Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 GetTestValue3()
       {
-         Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256 result;
-         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes.H256();
-         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Model.Base.Arr32U8();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256 result;
+         result = new Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types.H256();
+         result.Value = new Ajuna.SDK.Demos.NetApi.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Ajuna.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
@@ -85,7 +85,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          RandomnessCollectiveFlipControllerClient rpcClient = new RandomnessCollectiveFlipControllerClient(_httpClient, subscriptionClient);
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2 mockupValue = this.GetTestValue2();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeRandomMaterial());
@@ -98,7 +98,7 @@ namespace Ajuna.SDK.Demos.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT2 rpcResult = await rpcClient.GetRandomMaterial();
+         Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec.BoundedVecT21 rpcResult = await rpcClient.GetRandomMaterial();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

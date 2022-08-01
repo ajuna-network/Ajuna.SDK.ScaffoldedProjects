@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------
 
 using Ajuna.NetApi.Model.Types.Base;
-using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
 using Ajuna.SDK.Demos.RestService.Generated.Storage;
 using Ajuna.ServiceLayer.Attributes;
 using Microsoft.AspNetCore.Mvc;
@@ -43,8 +42,8 @@ namespace Ajuna.SDK.Demos.RestService.Generated.Controller
         ///  The `AccountId` of the sudo key.
         /// </summary>
         [HttpGet("Key")]
-        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32), 200)]
-        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.PalletSudo.SudoStorage), "KeyParams")]
+        [ProducesResponseType(typeof(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32), 200)]
+        [StorageKeyBuilder(typeof(Ajuna.SDK.Demos.NetApi.Generated.Storage.SudoStorage), "KeyParams")]
         public IActionResult GetKey()
         {
             return this.Ok(_sudoStorage.GetKey());

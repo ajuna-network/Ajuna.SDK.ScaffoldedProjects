@@ -12,10 +12,12 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Ajuna.NetApi.Model.Types.Base;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
+   using Ajuna.NetApi.Model.Types.Primitive;
    
    public interface ITemplateModuleControllerClient
    {
-      Task<BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U32>> GetProofs(Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT1 key);
+      Task<BaseTuple<AccountId32, U32>> GetProofs(Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT1 key);
       Task<bool> SubscribeProofs(Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT1 key);
    }
 }

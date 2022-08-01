@@ -12,7 +12,7 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto;
    using Ajuna.SDK.Demos.RestClient.Generated.Interfaces;
    
    public sealed class SudoControllerClient : BaseClient, ISudoControllerClient

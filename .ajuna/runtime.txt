@@ -1,1 +1,1 @@
-node-template_runtime
+node_runtime

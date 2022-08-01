@@ -12,12 +12,12 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSystem;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.frame_system;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PrimitiveTypes;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.frame_support.weights;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.primitive_types;
    using Ajuna.NetApi.Model.Types.Base;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.SpRuntime;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.generic.digest;
    using Ajuna.SDK.Demos.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class SystemControllerMockupClient : MockupBaseClient, ISystemControllerMockupClient
@@ -27,69 +27,69 @@ namespace Ajuna.SDK.Demos.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAccount(AccountInfo value, Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<bool> SetAccount(AccountInfo value, Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/Account", value.Encode(), SystemStorage.AccountParams(key));
+         return await SendMockupRequestAsync(_httpClient, "System/Account", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.AccountParams(key));
       }
       public async Task<bool> SetExtrinsicCount(U32 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/ExtrinsicCount", value.Encode(), SystemStorage.ExtrinsicCountParams());
+         return await SendMockupRequestAsync(_httpClient, "System/ExtrinsicCount", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.ExtrinsicCountParams());
       }
       public async Task<bool> SetBlockWeight(PerDispatchClassT1 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/BlockWeight", value.Encode(), SystemStorage.BlockWeightParams());
+         return await SendMockupRequestAsync(_httpClient, "System/BlockWeight", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.BlockWeightParams());
       }
       public async Task<bool> SetAllExtrinsicsLen(U32 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/AllExtrinsicsLen", value.Encode(), SystemStorage.AllExtrinsicsLenParams());
+         return await SendMockupRequestAsync(_httpClient, "System/AllExtrinsicsLen", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.AllExtrinsicsLenParams());
       }
       public async Task<bool> SetBlockHash(H256 value, U32 key)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/BlockHash", value.Encode(), SystemStorage.BlockHashParams(key));
+         return await SendMockupRequestAsync(_httpClient, "System/BlockHash", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.BlockHashParams(key));
       }
       public async Task<bool> SetExtrinsicData(BaseVec<U8> value, U32 key)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/ExtrinsicData", value.Encode(), SystemStorage.ExtrinsicDataParams(key));
+         return await SendMockupRequestAsync(_httpClient, "System/ExtrinsicData", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.ExtrinsicDataParams(key));
       }
       public async Task<bool> SetNumber(U32 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/Number", value.Encode(), SystemStorage.NumberParams());
+         return await SendMockupRequestAsync(_httpClient, "System/Number", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.NumberParams());
       }
       public async Task<bool> SetParentHash(H256 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/ParentHash", value.Encode(), SystemStorage.ParentHashParams());
+         return await SendMockupRequestAsync(_httpClient, "System/ParentHash", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.ParentHashParams());
       }
       public async Task<bool> SetDigest(Digest value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/Digest", value.Encode(), SystemStorage.DigestParams());
+         return await SendMockupRequestAsync(_httpClient, "System/Digest", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.DigestParams());
       }
       public async Task<bool> SetEvents(BaseVec<EventRecord> value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/Events", value.Encode(), SystemStorage.EventsParams());
+         return await SendMockupRequestAsync(_httpClient, "System/Events", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.EventsParams());
       }
       public async Task<bool> SetEventCount(U32 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/EventCount", value.Encode(), SystemStorage.EventCountParams());
+         return await SendMockupRequestAsync(_httpClient, "System/EventCount", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.EventCountParams());
       }
       public async Task<bool> SetEventTopics(BaseVec<BaseTuple<U32, U32>> value, H256 key)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/EventTopics", value.Encode(), SystemStorage.EventTopicsParams(key));
+         return await SendMockupRequestAsync(_httpClient, "System/EventTopics", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.EventTopicsParams(key));
       }
       public async Task<bool> SetLastRuntimeUpgrade(LastRuntimeUpgradeInfo value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/LastRuntimeUpgrade", value.Encode(), SystemStorage.LastRuntimeUpgradeParams());
+         return await SendMockupRequestAsync(_httpClient, "System/LastRuntimeUpgrade", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.LastRuntimeUpgradeParams());
       }
       public async Task<bool> SetUpgradedToU32RefCount(Bool value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/UpgradedToU32RefCount", value.Encode(), SystemStorage.UpgradedToU32RefCountParams());
+         return await SendMockupRequestAsync(_httpClient, "System/UpgradedToU32RefCount", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.UpgradedToU32RefCountParams());
       }
       public async Task<bool> SetUpgradedToTripleRefCount(Bool value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/UpgradedToTripleRefCount", value.Encode(), SystemStorage.UpgradedToTripleRefCountParams());
+         return await SendMockupRequestAsync(_httpClient, "System/UpgradedToTripleRefCount", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.UpgradedToTripleRefCountParams());
       }
       public async Task<bool> SetExecutionPhase(EnumPhase value)
       {
-         return await SendMockupRequestAsync(_httpClient, "System/ExecutionPhase", value.Encode(), SystemStorage.ExecutionPhaseParams());
+         return await SendMockupRequestAsync(_httpClient, "System/ExecutionPhase", value.Encode(), Ajuna.SDK.Demos.NetApi.Generated.Storage.SystemStorage.ExecutionPhaseParams());
       }
    }
 }

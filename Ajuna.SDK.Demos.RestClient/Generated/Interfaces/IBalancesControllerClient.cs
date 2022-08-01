@@ -12,19 +12,20 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Ajuna.NetApi.Model.Types.Primitive;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.PalletBalances;
-   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.pallet_balances;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.weak_bounded_vec;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.sp_runtime.bounded.bounded_vec;
    
    public interface IBalancesControllerClient
    {
       Task<U128> GetTotalIssuance();
       Task<bool> SubscribeTotalIssuance();
-      Task<AccountData> GetAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
-      Task<bool> SubscribeAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
-      Task<WeakBoundedVecT3> GetLocks(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
-      Task<bool> SubscribeLocks(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
-      Task<BoundedVecT3> GetReserves(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
-      Task<bool> SubscribeReserves(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key);
+      Task<AccountData> GetAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SubscribeAccount(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<WeakBoundedVecT2> GetLocks(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SubscribeLocks(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT10> GetReserves(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SubscribeReserves(Ajuna.SDK.Demos.NetApi.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<EnumReleases> GetStorageVersion();
       Task<bool> SubscribeStorageVersion();
    }

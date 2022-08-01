@@ -13,6 +13,8 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Ajuna.NetApi.Model.Types.Base;
+   using Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport;
+   using Ajuna.NetApi.Model.Types.Primitive;
    using Ajuna.SDK.Demos.RestClient.Generated.Interfaces;
    
    public sealed class NicksControllerClient : BaseClient, INicksControllerClient
@@ -24,9 +26,9 @@ namespace Ajuna.SDK.Demos.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT4, Ajuna.NetApi.Model.Types.Primitive.U128>> GetNameOf(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
+      public async Task<BaseTuple<BoundedVecT4, U128>> GetNameOf(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<Ajuna.SDK.Demos.NetApi.Generated.Model.FrameSupport.BoundedVecT4, Ajuna.NetApi.Model.Types.Primitive.U128>>(_httpClient, "nicks/nameof", Ajuna.SDK.Demos.NetApi.Generated.Model.PalletNicks.NicksStorage.NameOfParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT4, U128>>(_httpClient, "nicks/nameof", Ajuna.SDK.Demos.NetApi.Generated.Model.PalletNicks.NicksStorage.NameOfParams(key));
       }
       public async Task<bool> SubscribeNameOf(Ajuna.SDK.Demos.NetApi.Generated.Model.SpCore.AccountId32 key)
       {
